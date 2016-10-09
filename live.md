@@ -1239,3 +1239,34 @@ http://42.62.78.20:9501/?c=music&m=search
     "hit": 2001//总条数
 }
 ```
+### No.39接口说明
+* 歌曲搜索
+### No.39请求地址
+http://42.62.78.20:9501/?c=music&m=search
+### No.39请求参数
+``` sh
+  var param = {
+    "token"  : 'qCxHTPsD1k_XJxo43eQenQ',//用户token
+    "str" : 'a', //要搜索的歌名，拼音 首字母都行 
+  }
+```
+### No.39返回值
+```sh
+    var re = {
+    "status": 1,//-1 参数错误  1搜索成功
+    "music": [//歌曲列表
+        {
+            "id": 26017,//歌曲id
+            "lyrics": "http://lyric.banshenggua.cn/lrcx/17/217/26017.lrcx",//歌词文件
+            "filepath": "http://banzoucdn.banshenggua.cn/banzou/v2/2011/07/15/1914588716.mkv.3.mp3",//歌曲文件
+            "name": "爱就爱",//歌曲名称
+            "singer": "张靓颖",//演唱者
+            "size": 2570304,//文件大小
+            "type": "mp3"//文件类型
+        }
+    ],
+    "pn": 10,//当前页数
+    "rn": 20,//每页显示条数
+    "hit": 2001//总条数
+}
+```
